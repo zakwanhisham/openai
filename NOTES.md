@@ -29,3 +29,15 @@ There are pros and cons in using these model. The most capable model is `davinci
 - The fastest model and can perform task like `parsing text, address correction and certain kinds of classification`
 - Performance can often be improved by providing more context
 - **TLDR:** Good at: `Parsing text, simple classification, address correction, keywords`
+
+## Example that want to use
+- [x] Q&A
+- [ ] Summarize for 2nd grader
+- [ ] Advanced tweet classifier (sentiment analysis)
+- [ ] Factual answering
+- [x] Product name generator
+- [ ] Extract contact information
+- [ ] Analogy maker
+- [ ] Friend chat
+- [ ] Interview question
+- [ ] Chat

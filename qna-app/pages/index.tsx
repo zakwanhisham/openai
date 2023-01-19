@@ -2,20 +2,19 @@ import Head from "next/head";
 import { useState } from "react";
 import styles from "./index.module.css";
 
-
 export default function Home() {
-  const [animalInput, setAnimalInput] = useState("");
+  const [textPromptInput, setTextPromptInput] = useState("");
   const [result, setResult] = useState();
 
-  async function onSubmit(event) {
+  async function onSubmit(event: any) {
     event.preventDefault();
     try {
       const response = await fetch("/api/generate", {
         method: "POST",
         headers: {
-          "COntent-Type": "application/json",
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify({ animal: animalInput }),
+        body: JSON.stringify({ textPrompt: textPromptInput }),
       });
 
       const data = await response.json();
@@ -24,9 +23,8 @@ export default function Home() {
       }
 
       setResult(data.result);
-      setAnimalInput("");
-    } catch (error) {
-      // Consider implementing your own error handling logic here
+      setTextPromptInput("");
+    } catch (error: any) {
       console.error(error);
       alert(error.message);
     }
@@ -34,25 +32,25 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>OpenAI Demo</title>
-        <link rel="icon" href="/dog.png" />
+        <title>Q&A Demo</title>
+        <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <main className={styles.main}>
-        <img src="/dog.png" className={styles.icon} />
-        <h3>Name my pet</h3>
+        <img src="/favicon.ico" className={styles.icon} />
+        <h3>Ask me anything</h3>
+        <h4>This is a Q&A chat bot, you can ask me anything that is factual</h4>
         <form onSubmit={onSubmit}>
           <input
             type="text"
-            name="animal"
-            placeholder="Enter an animal"
-            value={animalInput}
-            onChange={(e) => setAnimalInput(e.target.value)}
+            name="textPrompt"
+            placeholder="Ask me your question"
+            value={textPromptInput}
+            onChange={(e) => setTextPromptInput(e.target.value)}
           />
-          <input type="submit" value="Generate name" />
+          <input type="submit" value="Generate answer" />
         </form>
         <div className={styles.result}>{result}</div>
       </main>
     </div>
-  );
+  )
 }
