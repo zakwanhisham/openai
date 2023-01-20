@@ -40,7 +40,7 @@ There are pros and cons in using these model. The most capable model is `davinci
 - [ ] Analogy maker
 - [ ] Friend chat
 - [ ] Interview question
-- [ ] Chat
+- [x] Chat
 
 ## Notes
 Need to rewrite `https://github.com/asliddinusmonov/popup-chat-react` in typescript. This package will be useful in the future as we need a consistent chat widget.
