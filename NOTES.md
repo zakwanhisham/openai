@@ -33,7 +33,7 @@ There are pros and cons in using these model. The most capable model is `davinci
 ## Example that want to use
 - [x] Q&A
 - [ ] Summarize for 2nd grader
-- [ ] Advanced tweet classifier (sentiment analysis)
+- [x] Advanced tweet classifier (sentiment analysis)
 - [ ] Factual answering
 - [x] Product name generator
 - [ ] Extract contact information
