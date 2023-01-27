@@ -38,16 +38,16 @@ export default function Home() {
       <main className={styles.main}>
         <img src="twitter-png.gif" className={styles.icon} />
         <h3>Ask me to rate the sentiment</h3>
-        <h4>This is a sentiment analysis bot, I will rate your tweet </h4>
+        <h4>This is a sentiment analysis bot, I will rate your chat </h4>
         <form onSubmit={onSubmit}>
           <input
             type="text"
             name="prompt"
-            placeholder="Put your tweet here"
+            placeholder="Put your chat here"
             value={promptInput}
             onChange={(e) => setPromptInput(e.target.value)}
           />
-          <input type="submit" value="Rate my tweet" />
+          <input type="submit" value="Rate my chat" />
         </form>
         <div className={styles.result}>{result}</div>
       </main>

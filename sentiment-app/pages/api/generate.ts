@@ -52,20 +52,11 @@ export default async function(req: any, res: any) {
 }
 
 function generatePrompt(prompt: String) {
-  return `Classify the sentiment in these tweets:
-
-1. "I can't stand homework"
-2. "This sucks. I'm bored 😠"
-3. "I can't wait for Halloween!!!"
-4. "My cat is adorable ❤️❤️"
-5. "I hate chocolate"
-6. "${prompt}"
-
-Tweet sentiment ratings:
-1. Negative
-2. Negative
-3. Positive
-4. Positive
-5. Negative
-6.`
+  return `Decide whether the chat is positive, neutral, or negative
+Chat: You're dumb
+Bot: Negative
+Chat: Thank you very much
+Bot: Positive
+Chat: ${prompt}
+Bot: `
 }
